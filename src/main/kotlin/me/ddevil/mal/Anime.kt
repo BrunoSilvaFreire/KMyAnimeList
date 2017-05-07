@@ -5,7 +5,6 @@ import me.ddevil.util.getFloat
 import me.ddevil.util.getInt
 import me.ddevil.util.getList
 import me.ddevil.util.getString
-import org.json.simple.JSONObject
 import org.w3c.dom.Element
 import java.net.URL
 import java.time.LocalDate
@@ -40,7 +39,6 @@ class Anime {
     val imgUrl: URL
 
     constructor(map: Map<String, Any>) {
-        println(JSONObject(map).toString())
         this.id = map.getInt(ANIME_ID_KEY)
         this.title = map.getString(ANIME_TITLE_KEY)
         this.englishTitle = map.getString(ANIME_ENGLISH_TITLE_KEY)

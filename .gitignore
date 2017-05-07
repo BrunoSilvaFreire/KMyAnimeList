@@ -6,6 +6,7 @@ gradle-app.setting
 .idea
 *.iws
 /out/
+/publication
 .idea_modules/
 atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
@@ -21,3 +22,4 @@ fabric.properties
 *.tar.gz
 *.rar
 hs_err_pid*
+src/test/resources/config.json

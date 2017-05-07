@@ -1,8 +1,6 @@
-package me.ddevil.mal.anime
+package me.ddevil.mal
 
-import me.ddevil.mal.AnimeStatus
-import me.ddevil.mal.AnimeType
-import me.ddevil.mal.request.getElementByTagName
+import me.ddevil.mal.util.getElementByTagName
 import me.ddevil.util.getFloat
 import me.ddevil.util.getInt
 import me.ddevil.util.getList

@@ -1,4 +1,4 @@
-package me.ddevil.mal
+package me.ddevil.mal.anime
 
 enum class AnimeStatus {
     NOT_YET_AIRED,

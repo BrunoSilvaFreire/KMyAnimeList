@@ -1,6 +1,6 @@
 package me.ddevil.mal.request
 
-import me.ddevil.mal.Anime
+import me.ddevil.mal.anime.Anime
 import org.w3c.dom.Element
 
 

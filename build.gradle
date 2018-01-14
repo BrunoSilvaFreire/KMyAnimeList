@@ -6,6 +6,8 @@ version = "1.0.0-SNAPSHOT"
 
 buildscript {
     ext.kotlin_version = '1.2.10'
+    ext.username_key = 'user'
+    ext.password_key = 'pass'
     repositories {
         mavenCentral()
     }

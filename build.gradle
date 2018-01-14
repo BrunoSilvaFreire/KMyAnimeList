@@ -5,7 +5,7 @@ group = "me.ddevil"
 version = "1.0.0-SNAPSHOT"
 
 buildscript {
-    ext.kotlin_version = '1.1.2-3'
+    ext.kotlin_version = '1.2.10'
     repositories {
         mavenCentral()
     }
@@ -22,6 +22,16 @@ publishing {
     }
     repositories {
         maven {
+            def prop = project.properties
+            if (prop.containsKey(username_key) & prop.containsKey(password_key)) {
+                it.maven {
+                    credentials {
+                        username = prop[username_key]
+                        password = prop[password_key]
+                    }
+                    url = 'http://repo.imddevil.com/repository/maven-snapshots/'
+                }
+            }
             url 'file://' + rootDir + "/publication"
         }
     }
@@ -31,6 +41,10 @@ repositories {
     mavenCentral()
     mavenLocal()
     jcenter()
+    maven {
+        name = 'ddevil'
+        url = 'http://repo.imddevil.com/repository/maven-snapshots/'
+    }
 }
 dependencies {
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.3'

@@ -5,5 +5,6 @@ enum class AnimeType {
     MOVIE,
     OVA,
     SPECIAL,
-    ONA
+    ONA,
+    MUSIC
 }

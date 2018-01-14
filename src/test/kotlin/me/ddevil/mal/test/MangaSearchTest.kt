@@ -14,7 +14,11 @@ class MangaSearchTest {
     @Test
     fun test() {
         val jsonUrl = getResource("/config.json")
-        val file = FileInputStream(File(jsonUrl.toURI()))
+        val f = File(jsonUrl.toURI())
+        if (!f.exists()) {
+            return
+        }
+        val file = FileInputStream(f)
         val jsonString = String(file.readBytes())
         println("Found config $jsonString")
         val json = JSONParser().parse(jsonString) as JSONObject
